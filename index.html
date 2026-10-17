@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CET Portal</title>
+<meta name="description" content="One portal for the websites, systems, forms, and services of the College of Engineering and Technology.">
+<link rel="icon" href="assets/cet_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#home" aria-label="CET Connect home">
+      <img id="tauLogo" class="logo" alt="Tarlac Agricultural University logo" hidden>
+      <img id="cetLogo" class="logo" alt="College of Engineering and Technology logo" hidden>
+      <span class="brand-text"><strong>CET Portal</strong><small>College of Engineering and Technology</small></span>
+    </a>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch to dark theme">◐</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <h1>Everything CET, All in One Place.</h1>
+        <p class="lead">Access the websites, digital services, forms, and online resources of the College of Engineering and Technology through one centralized portal.</p>
+        <div class="search-big">
+          <label class="sr" for="searchInput">Search websites, systems, forms, or services</label>
+          <input id="searchInput" type="search" placeholder="Search websites, systems, forms, or services..." autocomplete="off">
+          <button id="clearSearch" class="clear" type="button" aria-label="Clear search" hidden>×</button>
+        </div>
+      </div>
+      <aside id="orgs" class="orgs" aria-labelledby="orgsTitle" hidden>
+        <h2 id="orgsTitle" class="orgs-title">Facebook Pages</h2>
+        <div id="orgList" class="org-list"></div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div id="status" class="state" role="status" aria-live="polite"></div>
+    <section id="services" class="section" aria-label="All services">
+      <div class="controls">
+        <div class="chips" id="categoryChips" role="group" aria-label="Filter by category"></div>
+        <span id="resultCount" class="muted" aria-live="polite"></span>
+      </div>
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="state empty" hidden>
+        <h3>No matching resources</h3>
+        <p>Try a different keyword or choose another category.</p>
+        <button class="btn" id="resetBtn" type="button">Reset search and filters</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot">
+    <div>
+      <strong>College of Engineering and Technology</strong> · Tarlac Agricultural University
+      <p id="contactInfo"></p>
+      <p>This portal provides links to external websites and services. It does not operate or maintain them.</p>
+      <p class="links">
+        <button id="refreshBtn" class="btn-foot" type="button">Refresh</button>
+        <span id="updated" class="stamp"></span>
+      </p>
+    </div>
+    <p class="copy">© <span id="year"></span> College of Engineering and Technology, Tarlac Agricultural University.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
