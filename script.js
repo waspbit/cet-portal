@@ -117,7 +117,7 @@ async function fetchRecords() {
 async function loadData() {
   const box = $("status");
   box.className = "state loading";
-  $("grid").replaceChildren(...Array.from({ length: 6 }, () => el("div", { class: "skeleton" })));
+  $("grid").replaceChildren(...Array.from({ length: 4 }, () => el("div", { class: "skeleton" })));
   try {
     state.items = (await fetchRecords()).map(normalize).filter(Boolean);
     box.className = "state"; box.replaceChildren();
