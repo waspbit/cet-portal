@@ -14,7 +14,6 @@ const CONFIG = {
     { name: "Phil. Society of Agricultural and Biosystems Engineers Pre-Professional Group", logoUrl: "assets/psabe.png", facebookUrl: "https://www.facebook.com/psabeppgtauc" },
     { name: "Students Society on Information Technology Education", logoUrl: "assets/ssite.png", facebookUrl: "https://www.facebook.com/TAUBSIT" }
   ],
-  contact: { email: "", phone: "", address: "" }, // leave blank if not provided
   newDays: 30              // "New" tag shows this many days after DateAdded
 };
 
@@ -164,7 +163,7 @@ function makeCard(item) {
     meta,
     el("p", { text: item.description || "No description provided." }),
     el("a", { class: "btn", href: item.url, target: "_blank", rel: "noopener noreferrer",
-      "aria-label": "Visit " + item.title + " (opens in a new tab)", text: "Visit Website" })
+      "aria-label": "Visit " + item.title + " (opens in a new tab)", text: "Visit" })
   );
 }
 
